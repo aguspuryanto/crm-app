@@ -14,6 +14,7 @@ class DashboardController extends BaseController
             return redirect()->to('/login');
         }
 
-        return view('dashboard/index');
+        // echo "OK";
+        return view('dashboard');
     }
 }
