@@ -1,7 +1,8 @@
-<?= $this->extend('layouts/page_layout') ?>
+<?= $this->extend('layouts/page_layout_login') ?>
 
 <?= $this->section('content') ?>
-
+<div class="row h-100 justify-content-center align-items-center">
+<div class="col-md-4 offset-md-1">
     <h2>Login</h2>
     <?php if (session()->getFlashdata('msg')): ?>
         <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
@@ -17,5 +18,6 @@
         </div>
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
-    
+</div>
+</div>
 <?= $this->endSection() ?>
