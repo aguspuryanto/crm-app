@@ -18,10 +18,10 @@ class AuthController extends BaseController
         $session = session();
         $userModel = new UserModel();
 
-        $username = $this->request->getVar('username');
-        $password = $this->request->getVar('password');
+        $email = $this->request->getVar('inputEmail');
+        $password = $this->request->getVar('inputPassword');
 
-        $user = $userModel->where('username', $username)->first();
+        $user = $userModel->where('email', $email)->first();
 
         if ($user) {
             // Verifikasi password

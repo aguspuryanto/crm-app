@@ -32,7 +32,7 @@
                         <?php if (session()->getFlashdata('msg')): ?>
                             <div class="alert alert-danger"><?= session()->getFlashdata('msg') ?></div>
                         <?php endif; ?>
-                        <form>
+                        <form action="/authenticate" method="post">
                             <div class="form-floating mb-3">
                                 <input class="form-control" name="inputEmail" id="inputEmail" type="email" placeholder="name@example.com" />
                                 <label for="inputEmail">Email address</label>
